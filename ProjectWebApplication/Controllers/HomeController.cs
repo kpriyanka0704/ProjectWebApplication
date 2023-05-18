@@ -20,7 +20,8 @@ namespace ProjectWebApplication.Controllers
                 "Red","Orange","Yellow","Purple","Pink","Green"
             };
             ViewData["Colors"] = colors;
-            ViewData["message"] = "Hello from Controller";
+            TempData["message"] = "Hello from Controller";
+            TempData.Keep("message");//keep method will calldata for multiple request
 
             //using ViewBag
             ViewBag.Colors = colors;
